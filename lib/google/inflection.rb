@@ -14,13 +14,10 @@
 
 
 module Google
-  class APIClient
-    module VERSION
-      MAJOR = 0
-      MINOR = 2
-      TINY  = 0
-
-      STRING = [MAJOR, MINOR, TINY].join('.')
-    end
+  if defined?(ActiveSupport::Inflector)
+    INFLECTOR = ActiveSupport::Inflector
+  else
+    require 'extlib/inflection'
+    INFLECTOR = Extlib::Inflection
   end
 end

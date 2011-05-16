@@ -15,12 +15,16 @@
 
 module Google
   class APIClient
-    module VERSION
-      MAJOR = 0
-      MINOR = 2
-      TINY  = 0
+    ##
+    # An error which is raised when there is an unexpected response or other
+    # transport error that prevents an operation from succeeding.
+    class TransmissionError < StandardError
+    end
 
-      STRING = [MAJOR, MINOR, TINY].join('.')
+    ##
+    # An exception that is raised if a method is called with missing or
+    # invalid parameter values.
+    class ValidationError < StandardError
     end
   end
 end

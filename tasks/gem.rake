@@ -20,19 +20,17 @@ namespace :gem do
     s.rdoc_options.concat ['--main',  'README']
 
     # Dependencies used in the main library
-    s.add_runtime_dependency('signet', '>= 0.1.4')
-    s.add_runtime_dependency('addressable', '>= 2.2.2')
-    s.add_runtime_dependency('httpadapter', '>= 0.2.0')
-    s.add_runtime_dependency('json', '>= 1.1.9')
+    s.add_runtime_dependency('signet', '~> 0.2.2')
+    s.add_runtime_dependency('addressable', '~> 2.2.2')
+    s.add_runtime_dependency('httpadapter', '~> 1.0.0')
+    s.add_runtime_dependency('json', '>= 1.4.6')
     s.add_runtime_dependency('extlib', '>= 0.9.15')
 
     # Dependencies used in the CLI
     s.add_runtime_dependency('launchy', '>= 0.3.2')
-    s.add_runtime_dependency('rack', '= 1.2.0')
-    s.add_runtime_dependency('sinatra', '>= 1.0')
 
     # Dependencies used in the examples
-    s.add_runtime_dependency('liquid', '>= 2.2.2')
+    s.add_development_dependency('sinatra', '>= 1.2.0')
 
     s.add_development_dependency('rake', '>= 0.7.3')
     s.add_development_dependency('rspec', '~> 1.2.9')
